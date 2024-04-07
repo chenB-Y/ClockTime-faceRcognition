@@ -38,7 +38,7 @@ The Attendance Tracking Application is a tool designed to facilitate attendance 
   LOG_FILE=./log.txt <br>
   AWS_ACCESS_KEY_ID=<br>
   AWS_SECRET_ACCESS_KEY= <br>
-Note: If you don't have AWS credentials, you can obtain them from your AWS account. If you don't have an AWS account or access to AWS services, please contact [chenby5941email@example.com](mailto:your_email@example.com) for assistance.
+Note: If you don't have AWS credentials, you can obtain them from your AWS account. If you don't have an AWS account or access to AWS services, please contact [chenby5941@gmail.com](mailto:your_email@example.com) for assistance.
 
 
 7. Install dependencies:
