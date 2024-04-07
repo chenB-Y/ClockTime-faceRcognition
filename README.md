@@ -24,3 +24,46 @@ The Attendance Tracking Application is a tool designed to facilitate attendance 
 - Boto3: Python SDK for AWS, used for interacting with S3
 - Face_recognition: Library for face recognition tasks
 - DeepFace: Deep learning-based face recognition library
+
+## Installation
+
+1. Clone the repository:
+   https://github.com/chenB-Y/ClockTime-faceRcognition.git
+   
+3. Navigate to the project directory:
+   cd attendance-tracking
+   
+5. Create a .env file with the following data:
+   DB=./db
+  LOG_FILE=./log.txt
+  AWS_ACCESS_KEY_ID=
+  AWS_SECRET_ACCESS_KEY=
+Note: If you don't have AWS credentials, leave the `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` empty for local development. For production deployment, obtain AWS credentials from your AWS account.
+
+6. Install dependencies:
+   pip install -r requirements.txt
+
+
+## Usage
+
+1. Run the app:
+   python main.py
+   
+3. Access the application through a web browser at `http://localhost:5000`.
+
+4. Click on the "Register" button to register new users by capturing their facial images.
+
+5. Use the "Clock In" and "Clock Out" buttons to log in and out, respectively.
+
+6. Visit the website to view attendance records and generate reports.
+
+## Contributing
+
+Contributions to the Attendance Tracking Application are welcome! To contribute:
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/your_feature_name`).
+3. Make your changes and commit them (`git commit -am 'Add new feature'`).
+4. Push your changes to the branch (`git push origin feature/your_feature_name`).
+5. Create a new pull request.
+
