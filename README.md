@@ -22,3 +22,4 @@ The Attendance Tracking Application is a tool designed to facilitate attendance 
 - AWS S3: Cloud storage service used for storing user data and attendance records
 - Boto3: Python SDK for AWS, used for interacting with S3
 - Face_recognition: Library for face recognition tasks
+- DeepFace: Deep learning-based face recognition library
