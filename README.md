@@ -10,8 +10,9 @@ The Attendance Tracking Application is a tool designed to facilitate attendance 
 - Face recognition-based login and logout system
 - User registration with facial image capture
 - Automatic attendance logging
-- Import and export attendance data
+- Import and export attendance data from AWS S3 bucket
 - Web-based interface for easy access
+- View attendance records on a website
 
 ## Technologies Used
 
