@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log Content</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        .header, .footer {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+        pre{
+        font-size:18px;
+        }
+        #totalT{
+        font-size:30px
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>Time Clock Application</h1>
+</div>
+
+<div class="container">
+    <h1>Log Content:</h1>
+    <pre id="log_content">{{ log_content }}</pre>
+    <pre id="totalT">{{ total_time }}</pre>
+
+    <!-- Button to go back to homepage -->
+    <a href="/" class="btn btn-primary">Back</a>
+</div>
+
+<div class="footer">
+    <h3>Footer</h3>
+</div>
+
+</body>
+</html>

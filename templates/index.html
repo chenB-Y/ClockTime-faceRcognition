@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect Button</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .flexContainer{
+            display: flex;
+            gap:30px;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .container{
+            padding-bottom: 80px;
+        }
+        h1,h4{
+            text-align: center;
+        }
+        .header, .footer {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            z-index: 1000;
+        }
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+        }
+        .header{
+            position: relative;
+            left: 0;
+            top: 0;
+            width: 100%;
+        }
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+        .clock {
+        color: #000;
+        font-size: 56px;
+        text-align: center;
+        width: 100vh;
+        top: 15%;
+        left: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+    }
+
+        h2 {
+            color: #85C1E9;
+            padding: 30px;
+            font-size: 56px;
+        }
+        .bg {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 3em;
+            height: 3em;
+            background: inherit;
+            position: relative;
+            border-radius: 50%;
+            box-shadow: inset -2px -2px 5px rgba(255, 255, 255, 1), inset 3px 3px 5px rgba(0, 0, 0, 0.2);
+        }
+        .bg:last-child {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: inherit;
+            position: relative;
+            margin-left: 20px;
+            width: 3em;
+            height: 3em;
+            font-size: 16px;
+            padding: 15px;
+            border-radius: 50%;
+            box-shadow: inset -2px -2px 5px rgba(255, 255, 255, 1), inset 3px 3px 5px rgba(0, 0, 0, 0.2);
+        }
+        #ap{
+        font-size: 22px;
+        }
+    </style>
+</head>
+<body>
+<div class="flexContainer">
+    <div class="header">
+        <h1>Time Clock Application</h1>
+    </div>
+
+    <div class="clock">
+        <div class="bg">
+            <h2 id="h">12</h2>
+        </div>
+        <h2>:</h2>
+        <div class="bg">
+            <h2 id="m">20</h2>
+        </div>
+        <h2>:</h2>
+        <div class="bg">
+            <h2 id="s">00</h2>
+        </div>
+        <div class="bg">
+            <h2 id="ap">AM</h2>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Welcome to Time Clock Application</h1>
+        <h4>In this website yoy can track all your employee's attendance.</h4><br>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <input type="text" id="textInput" class="form-control" placeholder="Enter desire name">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <select id="monthDropdown" class="form-control">
+                        <option value="">Select Month</option>
+                        <option value="01">January</option>
+                        <option value="02">February</option>
+                        <option value="03">March</option>
+                        <option value="04">April</option>
+                        <option value="05">May</option>
+                        <option value="06">June</option>
+                        <option value="07">July</option>
+                        <option value="08">August</option>
+                        <option value="09">September</option>
+                        <option value="10">October</option>
+                        <option value="11">November</option>
+                        <option value="12">December</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <button onclick="redirectToLogFile()" class="btn btn-primary btn-block">Go to Log File</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <h3>Footer</h3>
+    </div>
+
+</div>
+
+
+
+<script>
+    function redirectToLogFile() {
+        var inputText = document.getElementById("textInput").value.trim();
+        var month = document.getElementById("monthDropdown").value;
+        var url = "http://localhost:5000/get_log_file";
+
+        if (inputText !== "") {
+            url += "?name=" + encodeURIComponent(inputText);
+        }
+
+        if (month !== "") {
+            if (url.indexOf("?") !== -1) {
+                url += "&month=" + month;
+            } else {
+                url += "?month=" + month;
+            }
+        }
+
+        window.location.href = url;
+    }
+
+    function realTime() {
+        var date = new Date();
+        var hour = date.getHours();
+        var min = date.getMinutes();
+        var sec = date.getSeconds();
+        var halfday = "AM";
+        halfday = (hour >= 12) ? "PM" : "AM";
+        hour = (hour == 0) ? 12 : ((hour > 12) ? (hour - 12) : hour);
+        hour = update(hour);
+        min = update(min);
+        sec = update(sec);
+        document.getElementById("h").innerText = hour;
+        document.getElementById("m").innerText = min;
+        document.getElementById("s").innerText = sec;
+        document.getElementById("ap").innerText = halfday;
+        setTimeout(realTime, 1000);
+    }
+
+    function update(k) {
+        if (k < 10) {
+            return "0" + k;
+        } else {
+            return k;
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+        realTime();
+    });
+</script>
+
+</body>
+</html>

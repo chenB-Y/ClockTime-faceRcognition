@@ -1,0 +1,16 @@
+chen 28/3/2024 ; start time-17:16,  End time-17:16 . Total Time is:00:00 
+chen 28/3/2024 ;  End time-17:17 .
+gal 28/3/2024 ; start time-17:21,  End time-17:22 . Total Time is:00:01
+chen 28/3/2024 ; Entrance time-11:26
+chen 29/3/2024 ;  End time-11:27.
+chen 29/3/2024 ; start time-11:27,  End time-11:32. Total Time is:00:05
+chen 1/4/2024 ; start time-17:28,  End time-17:28. Total Time is:00:00
+chen 2/4/2024 ; start time-14:30,  End time-14:31. Total Time is:00:01
+chen 3/4/2024 ; start time-11:07,  End time-11:07. Total Time is:00:00
+chen 4/4/2024 ; start time-18:46,  End time-18:52. Total Time is:00:06
+chen 4/4/2024 ; start time-20:09,  End time-20:10. Total Time is:00:01 
+tomer 4/4/2024 ; start time-20:24,  End time-20:25. Total Time is:00:01 
+chen 4/4/2024 ; start time-21:11,  End time-21:11. Total Time is:00:00 
+chen 7/4/2024 ; start time-14:35,  End time-14:36. Total Time is:00:01 
+chen 7/4/2024 ; start time-15:53,  End time-15:53. Total Time is:00:00 
+chen 7/4/2024 ; start time-17:16,  End time-17:16. Total Time is:00:00 
