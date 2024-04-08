@@ -3,7 +3,7 @@
 ![WhatsApp Image 2024-03-29 at 12 39 01 (1)](https://github.com/chenB-Y/ClockTime-faceRcognition/assets/129218828/21ec4ef8-8977-47f3-93ce-d7ada4eb405f)
 
 
-The Attendance Tracking Application is a tool designed to facilitate attendance management in various settings, such as schools, offices, or events.  It allows users to log in and out using facial recognition technology and keeps track of attendance records.
+The Attendance Tracking Application is a tool designed to facilitate attendance management in various settings, such as schools, offices, or events. It allows users to log in and out using facial recognition technology and keeps track of attendance records.
 
 ## Features
 
